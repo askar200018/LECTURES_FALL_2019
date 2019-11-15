@@ -20,7 +20,10 @@ int main(){
     }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            c[i][j] += a[i][j] * b[j][i];
+            // c[i][j] += a[i][j] * b[j][i];
+            for(int k = 0; k < n; k++){
+                c[i][j] += a[i][k] * b[k][j];
+            }
         }
     }
     for(int i = 0; i < n; i++){
